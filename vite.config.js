@@ -7,6 +7,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [react()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        silenceDeprecations: ['import', 'global-builtin', 'color-functions'],
+      },
+    },
+  },
   resolve: {
     alias: {
       '@components': path.resolve(__dirname, 'components'),
