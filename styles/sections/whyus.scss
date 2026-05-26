@@ -1,0 +1,23 @@
+.s-why-us {
+  padding-top: $xxl*0.5;
+  @media ($mdDown) {
+    &#{&} {
+      margin-bottom: 0;
+    }
+    .c-list {
+      max-width: 60%;
+      margin: 0 auto;
+    }
+    .c-list__item {
+      border-left-width: 0;
+    }
+  }
+  @media ($smDown) {
+    .c-list {
+      max-width: none;
+    }
+  }
+  @media ($mdUp) {
+    padding-top: $xl;
+  }
+}

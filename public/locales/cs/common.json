@@ -1,0 +1,45 @@
+{
+  "metas": {
+    "content": "Veterinární ordinace V.I.Pet na Úvoze, Brno",
+    "desc": "...protože každý mazlíček je důležitý"
+  },
+  "header": {
+    "menuItems": {
+      "intro": "Úvod",
+      "aboutUs": "O nás",
+      "openingHours": "Ordinační hodiny",
+      "contact": "Kontakt",
+      "callUs": "Volejte"
+    }
+  },
+  "intro": {
+    "desc": "...protože každý mazlíček je důležitý"
+  },
+  "about": {
+    "welcome": "Vítejte!",
+    "first": "Jmenuji se Klára Palicová a můj pes je pro mě v životě mým nepostradatelným parťákem a miláčkem. Od roku 2013 se věnuji veterinární medicíně zejména psů a koček. V profesním životě jsem pracovala převážně na NON-STOP klinikách, kde jsem viděla a ošetřila široké spektrum případů.",
+    "second": "Své vědomosti a zkušenosti využiji při léčbě Vašich čtyřnohých společníků. Budu se jim věnovat s péčí, jakoby byli moji vlastní v příznivé otevírací době a to i víkendech.",
+    "third": "Problémy Vašich mazlíčků budeme řešit společně a v případě nutnosti úzce-specializovaného vyšetření zajistím objednání ke specialistovi, k co možná nejlepší spokojenosti Vás i Vašich miláčků - protože o ně tady kráčí…"
+  },
+  "openHours": {
+    "title": "Ordinační hodiny",
+    "monday": "Po",
+    "tuesday": "Út",
+    "wednesday": "St",
+    "thursday": "Čt",
+    "friday": "Pá",
+    "saturday": "So",
+    "sunday": "Ne",
+    "booked": "Pouze objednaní pacienti",
+    "closed": "ZAVŘENO"
+  },
+  "features": {
+    "title": "Proč k nám?",
+    "first": "Jste pracující a nestíháte se svým miláčkem zajít k veterináři?",
+    "second": "Máte pocit, že Váš mazlíček je pouze další v řadě a veterinář na Vás nemá dostatek času?",
+    "third": "Nemáte rádi, když Vašeho miláčka pokaždé ošetřuje někdo jiný?"
+  },
+  "contact": {
+    "title": "Kontaktní informace"
+  }
+}

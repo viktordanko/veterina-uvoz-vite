@@ -1,0 +1,82 @@
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% 8%, rgba(117, 205, 196, 0.16), transparent 32rem),
+    radial-gradient(circle at 90% 18%, rgba(255, 206, 104, 0.16), transparent 28rem),
+    #fffaf4;
+}
+
+.header {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 18px 50px rgba(63, 43, 26, 0.08);
+}
+
+.box,
+.section,
+.b-contact,
+.b-opening {
+  border-radius: 28px;
+}
+
+.btn,
+button,
+a.btn {
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.btn:hover,
+a.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(55, 150, 139, 0.22);
+}
+
+.b-intro::after {
+  background: linear-gradient(90deg, rgba(48, 36, 28, 0.68), rgba(48, 36, 28, 0.2));
+}
+
+.b-list__item,
+.b-opening__content,
+.b-contact__content {
+  box-shadow: 0 22px 70px rgba(68, 48, 32, 0.08);
+}
+
+.m-main__link {
+  position: relative;
+}
+
+.m-main__link::after {
+  background: currentColor;
+  border-radius: 999px;
+  bottom: -0.45rem;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+  width: 100%;
+}
+
+.m-main__link:hover::after {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

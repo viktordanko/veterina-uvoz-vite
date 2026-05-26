@@ -1,0 +1,106 @@
+$menuItems: 6;
+$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+
+.m-main {
+  flex: 0 1 auto;
+  &__list {
+    @extend %reset-ul;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &__item {
+    @extend %reset-ul-li;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  &__link {
+    padding: 30px 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: $colorBlack;
+    text-decoration: none;
+    transition: color $t;
+  }
+
+  // VARIANTs
+  &__item--phone &__link {
+    margin-left: 10px;
+    padding: 0;
+  }
+
+  // STATEs
+  &__link:hover {
+    color: $colorPrimary;
+  }
+
+  @media ($mdDown) {
+    flex: 0 0 auto;
+    &__list {
+      position: absolute;
+      top: calc(100% - 60px); // - header's height
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $colorWhite;
+      height: calc(100vh + 10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: background-color $t, visibility $t $cubic, opacity $t $cubic;
+    }
+    &__item {
+      display: block;
+      flex: 0 0 auto;
+      text-align: center;
+      opacity: 0;
+      transition: opacity $t $cubic;
+      @for $i from 1 through $menuItems {
+        &:nth-child(#{$i}) {
+          transition-delay: #{0.3 - ($i * 0.07)}s;
+        }
+      }
+    }
+    &__link {
+      display: block;
+      width: 100%;
+      padding: 15px 20px;
+      font-size: 20px;
+    }
+    &__item--lang {
+      margin-top: 30px;
+    }
+
+    // STATEs
+    .is-opened & {
+      &__list {
+        visibility: visible;
+        opacity: 1;
+      }
+      &__item {
+        opacity: 1;
+        @for $i from 1 through $menuItems {
+          &:nth-child(#{$i}) {
+            transition-delay: #{0.05 * $i + 0.3}s;
+          }
+        }
+      }
+    }
+    &__item--phone {
+      padding-top: 10px;
+    }
+  }
+
+  @media ($mdUp) {
+    &__item + &__item {
+      margin-left: 10px;
+    }
+    &__item--phone &__link {
+      margin-left: 10px;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+$spacings: (
+  '0': 0,
+  'xs': $xs * 0.5,
+  'sm': $sm * 0.5,
+  'md': $md,
+  'lg': $lg * 0.5,
+  'xl': $xl * 0.5,
+  'xxl': $xxl * 0.5,
+  'xxxl': $xxxl * 0.5,
+  'xxxxl': $xxxxl * 0.5,
+);
+
+$spacingsDesktop: (
+  '0': 0,
+  'xxs': $xxs,
+  'xs': $xs,
+  'sm': $sm,
+  'md': $md,
+  'lg': $lg,
+  'xl': $xl,
+  'xxl': $xxl,
+  'xxxl': $xxxl,
+  'xxxxl': $xxxxl,
+);
+
+@each $key, $value in $spacings {
+  .u-mt-#{$key} {
+    margin-top: $value;
+  }
+  .u-mb-#{$key} {
+    margin-bottom: $value;
+  }
+  .u-pt-#{$key} {
+    padding-top: $value;
+  }
+}
+@each $key, $value in $spacingsDesktop {
+  @media ($mdUp) {
+    .u-mt-#{$key} {
+      margin-top: $value;
+    }
+    .u-mb-#{$key} {
+      margin-bottom: $value;
+    }
+    .u-pt-#{$key} {
+      padding-top: $value;
+    }
+  }
+}

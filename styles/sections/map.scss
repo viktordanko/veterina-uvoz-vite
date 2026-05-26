@@ -1,0 +1,6 @@
+.s-map {
+  padding-top: $xxl * 0.5;
+  @media ($mdUp) {
+    padding-top: $xxl;
+  }
+}

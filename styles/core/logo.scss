@@ -1,0 +1,33 @@
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: $colorPrimary;
+  &__icon {
+    width: 40px;
+    flex: 0 0 40px;
+    path {
+      fill: $colorPrimary;
+      transition: fill $t;
+    }
+  }
+  &__text {
+    display: block;
+    margin-left: 10px;
+  }
+
+  // STATEs
+  &:hover &__icon path {
+    fill: $colorText;
+  }
+
+  // RWD
+  @media ($mdUp) {
+    flex: 0 0 auto;
+    &__text {
+      flex: 1 0 auto;
+    }
+  }
+}

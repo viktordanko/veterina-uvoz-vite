@@ -1,0 +1,44 @@
+.b-opening {
+  padding: $xs;
+  border-radius: 4px;
+  box-shadow: 0 0 20px 0 rgba($colorBlack, 0.2);
+  margin-bottom: 0;
+  background-color: $colorWhite;
+  &__title {
+    text-align: center;
+  }
+  &__table {
+    margin-bottom: 0;
+    th {
+      color: $colorPrimary;
+    }
+    th,
+    td {
+      font-weight: bold;
+      padding: 10px;
+    }
+  }
+  &__note {
+    font-size: 0.85rem;
+    color: $colorGray;
+    text-align: center;
+    margin-top: $xs;
+    margin-bottom: 0;
+  }
+
+  // RWD
+  @media ($smDown) {
+    margin: 0 -15px;
+  }
+  @media ($mdUp) {
+    padding: $sm;
+    &__table th,
+    &__table td {
+      padding: $xs $sm;
+    }
+  }
+  @media ($lgUp) {
+    max-width: 50%;
+    margin-inline: auto;
+  }
+}
